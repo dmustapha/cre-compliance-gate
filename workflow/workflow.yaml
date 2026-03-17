@@ -1,0 +1,24 @@
+# CRE Compliance Gate Workflow Configuration
+name: cre-compliance-gate
+version: "1.0.0"
+
+trigger:
+  type: http-trigger@1.0.0-alpha
+  config:
+    method: POST
+    path: /compliance-deposit
+
+capabilities:
+  - name: http-client
+    type: http-actions@1.0.0-alpha
+  - name: evm-client
+    type: evm@1.0.0
+    config:
+      chainSelector: "16015286601757825753"  # Ethereum Sepolia
+
+config:
+  worldIdAppId: "${WORLD_ID_APP_ID}"
+  worldIdAction: "deposit-compliance-check"
+  sanctionsApiUrl: "https://api.opensanctions.org"
+  sanctionsApiKey: "${SANCTIONS_API_KEY}"
+  vaultAddress: "${VAULT_ADDRESS}"

@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+.pnp.*
+
+# Build
+.next/
+out/
+dist/
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env*.local
+
+# Foundry
+contracts/.gas-snapshot
+
+# Local
+.claude/
+*.log
+*.backup
+
+# OS
+.DS_Store
+*.swp
+.vercel
+
+# IDE
+.vscode/
+.idea/

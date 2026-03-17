@@ -1,0 +1,16 @@
+{
+  "name": "cre-compliance-gate-workflow",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@chainlink/cre-sdk": "1.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
